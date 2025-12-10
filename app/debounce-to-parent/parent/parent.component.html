@@ -1,0 +1,7 @@
+Parent component:
+<div *ngFor="let item of listEmits; let index = index; let isLast = last">
+    <span>{{isLast}}{{index+ 1}} ::::::::::{{item}}</span>
+</div>
+<app-child (childSearchTrigger)="childSearchHandler($event)">
+
+</app-child>

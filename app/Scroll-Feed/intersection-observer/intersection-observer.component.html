@@ -1,0 +1,35 @@
+<div class="feed-container">
+  <div class="post-card" *ngFor="let post of posts">
+    <div class="post-header">
+      <img class="avatar" src="https://i.pravatar.cc/40?img={{ post.id }}" />
+      <div>
+        <h4 class="name">User {{ post.id }}</h4>
+        <p class="subtitle">Software Engineer • 1h ago</p>
+      </div>
+    </div>
+    <div class="post-content">
+      <p>{{ post.title }}</p>
+      <p>{{ post.body }}</p>
+    </div>
+    <hr />
+
+    <div class="post-actions">
+      <button class="action-btn">👍 Like</button>
+      <button class="action-btn">💬 Comment</button>
+      <button class="action-btn">🔄 Repost</button>
+      <button class="action-btn">📤 Share</button>
+    </div>
+  </div>
+
+  <div class="loading" *ngIf="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <p class="end" *ngIf="!hasMore && !loading">
+    🎉 You’re all caught up!
+  </p>
+
+  <!-- Observer Anchor -->
+  <div #anchor class="anchor"></div>
+
+</div>

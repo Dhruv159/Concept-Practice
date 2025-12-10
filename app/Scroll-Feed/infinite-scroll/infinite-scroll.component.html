@@ -1,0 +1,17 @@
+<h2>Infinite Scroll</h2>
+<p>
+  <strong>1️⃣ IntersectionObserver (Best Practice): </strong>“Uses a sentinel. Very efficient. Automatic, smooth, and handles no-scrollbar cases.”
+</p>
+<p>
+  <strong>2️⃣ Virtual Scroll (CDK): </strong>“For huge lists. Only renders what's visible. Best memory/performance.”
+</p>
+<p>
+  <strong>3️⃣ Scroll Listener: </strong>“Old method. Less efficient. Needs throttling + manual scroll checks.”
+</p>
+<ul style="display: flex; list-style: none;">
+  <li><a routerLink="traditional">Traditional Approach</a></li>
+  <li style="margin-left: 12px; margin-right: 12px;"><a routerLink="intersection-observer">Intersection Observer</a></li>
+  <li><a routerLink="angular-cdk">Angular CDK Virtual Scroll</a></li>
+</ul>
+
+<router-outlet>

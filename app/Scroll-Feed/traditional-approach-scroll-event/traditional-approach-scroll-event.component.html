@@ -1,0 +1,7 @@
+<div class="post-container">
+  <div *ngFor="let post of posts" class="post-card">
+    {{ post.text }}
+  </div>
+
+  <div class="loader" *ngIf="loading">Loading...</div>
+</div>
